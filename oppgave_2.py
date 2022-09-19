@@ -30,14 +30,14 @@ def egensirkler(A):
     for i in range(np.shape(A)[1]): # for-lokke for aa gaa fjennom alle radene
         sirkel(d_list[i], 0, r_list[i]) # tegner egensirklene
 
+    egenverdier = np.linalg.eig(A)[0] # finner egenverdiene
+    '''
+    np.linalg.eig() gir en tuple hvor det første elementet er egenverdiene, så vi henter på index 0
+    '''
+    for i in range(len(egenverdier)): # for-lokke for aa gaa gjennom alle egenverdiene
+        re = np.real(egenverdier[i]) # henter de realdelen av egenverdien
+        im = np.imag(egenverdier[i]) # henter imaginærdelen av egenverdiene
+        plt.plot(re,im,'.',markersize = 30) # plotter egenverdiene med realverdiene langs x-aksen og imaginærdelene langs y-aksen
+
+
     plt.show() # viser plottet
-
-
-
-B = np.matrix([
-    [-2,0,1/2,0],
-    [-1/4,1,1/4,0],
-    [0,0,3,-1],
-    [1/8,1/8,1/4,2]])
-
-egensirkler(B)
