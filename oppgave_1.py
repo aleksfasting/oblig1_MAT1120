@@ -27,17 +27,7 @@ def egensirkler(A):
     d_list = finn_d(A) # bruker funksjonen for aa finne d-verdier paa matrisen
     r_list = finn_r(A) # bruker funksjonen for aa finne r-verdier paa matrisen
 
-    for i in range(np.shape(A)[1]): # for-lokke for aa gaa fjennom alle radene
+    for i in range(np.shape(A)[1]): # for-lokke for aa gaa gjennom alle radene
         sirkel(d_list[i], 0, r_list[i]) # tegner egensirklene
 
     plt.show() # viser plottet
-
-
-
-B = np.matrix([
-    [-2,0,1/2,0],
-    [-1/4,1,1/4,0],
-    [0,0,3,-1],
-    [1/8,1/8,1/4,2]])
-
-egensirkler(B)

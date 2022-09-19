@@ -41,3 +41,43 @@ def egensirkler(A):
 
 
     plt.show() # viser plottet
+
+plt.figure(1)
+
+A = np.matrix([
+    [-2,0,1/2,1],
+    [-1/4,1,1/4,0],
+    [0,0,3,-1],
+    [1/8,1/8,1/4,2]]) # matrisen fra eskempel 1
+
+egensirkler(A) # funksjonen paa matrisen A
+
+plt.figure(2)
+
+B = np.matrix([
+    [5,-1,1],
+    [1,2,1],
+    [1,-1,-1]]) # matrisen fra eskempel 1
+
+egensirkler(B) # funksjonen paa matrisen B
+
+plt.figure(3)
+
+C = np.matrix([
+    [1,0,0,-1,0],
+    [0,1,0,0,-1],
+    [-1,0,-2,0,1],
+    [0,0,0,-1,1],
+    [1,0,-1,1,0]]) # egenvalgt matrise
+
+egensirkler(C) # funksjonen paa matrisen C
+
+plt.figure(4)
+
+D = np.matrix([
+    [-2,0,0,0],
+    [0,-1-1j,0,0],
+    [0,0,1+1j,0],
+    [0,0,0,2]]) # diagonalmatrise
+
+egensirkler(D) # funksjonen paa matrisen D
